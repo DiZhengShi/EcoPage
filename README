@@ -1,13 +1,14 @@
-## Este es el tipo de mi proyecto:
->Página web 
+# Ecologiest Panel
 
-## Las bibliotecas que voy a utilizar:
-- Biblioteca 1
-- Biblioteca N
+Página web que compila todo lo relacionado a la ecología y el cuidado del medio ambiente en un solo lugar para facilitar la divulgación
+de este tópico tan oído hoy en día.
+### Vista previa:
 
-## Referencias útiles:
-- Referencia 1
-- Referencia N
 
-## Los artículos de la guía que me ayudarán durante el desarrollo
-Un breve comentario que le ayudará a recordar de qué trata el artículo... [una palabra clicable que contendrá el enlace](https://enlace_al_artículo)
+## Autores:
+[DiZhengShi](https://github.com/DiZhengShi) - Documentación, backend.
+[Juan Pablo](https://github.com/JuanPro96) - Frontend, backend.
+
+## Bibliotecas utilizadas:
+- [Flask](https://flask.palletsprojects.com/en/stable/)
+- [Jinja2](https://jinja.palletsprojects.com/en/stable/)

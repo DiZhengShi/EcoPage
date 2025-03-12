@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memes</title>
+</head>
+<body>
+    <h2>¡Sube tu meme!</h2>
+<form action="/subir_meme" method="POST" enctype="multipart/form-data">
+    <input type="text" name="titulo" placeholder="Título del meme" required>
+    <input type="file" name="imagen" accept="image/*" required>
+    <button type="submit">Subir Meme</button>
+</form>
+
+<!-- Mostrar memes subidos -->
+<div class="memes-container">
+    {% for meme in memes %}
+        <div class="meme">
+            <h3>{{ meme.titulo }}</h3>
+            <img src="{{ url_for('static', filename='memes/' + meme.imagen) }}" alt="Meme">
+        </div>
+    {% endfor %}
+</div>
+
+
+
+    <h1>Página de Memes</h1>
+    <p>Aquí irán los mejores memes.</p>
+    <a href="/">Volver a inicio</a>
+</body>
+</html>
+
+<style>
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+form input, form button {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    border-radius: 5px;
+}
+
+form input {
+    background: #333;
+    color: white;
+    border: 1px solid white;
+}
+
+form button {
+    background: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #ddd;
+}
+
+.memes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.meme {
+    text-align: center;
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.meme img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+a {
+    display: inline-block;
+    background: #222;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid #fff;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
+}
+</style>
