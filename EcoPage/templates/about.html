@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>📌Sobre Nosotros</h1>
+    <p>Bienvenido a nuestra plataforma, un espacio dedicado a proporcionar información y</p>
+    <p>herramientas útiles para nuestra comunidad. Nos esforzamos por ofrecer contenido actualizado, confiable.</p>
+    <p>y relevante para nuestros usuarios</p>
+    <p2>🌍 Nuestra Misión</p2>
+    <p>Facilitar el acceso a la información y fomentar un ambiente de aprendizaje e innovación.</p>   
+        
+    <p2>💡 Nuestros Valores</p2>
+    <p>✔️ Transparencia</p>
+    <p>✔️ Compromiso</p>
+    <p></p>✔️ Calidad
+    <p>✔️ Innovación</p>
+    <p2>📧 Contáctanos</p2>
+    <p>Si tienes preguntas, sugerencias o simplemente quieres ponerte en </p>
+    <p>contacto con nosotros, llena el formulario con tu nombre y correo electrónico.</p>
+    
+        
+
+    <a href="{{ url_for('home') }}" class="button">Volver a Inicio</a>
+</body>
+</html>
+
+        <h2>Déjanos tus datos</h2>
+        <form class="formulario">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+</body>
+</html>
+
+
+<style>
+    /* Estilos generales */
+    body {
+        background-color: #000;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+    }
+    
+    /* Estilos para el título */
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+    
+    /* Estilos para el botón */
+    a {
+        display: inline-block;
+        background: #222;
+        color: #fff;
+        padding: 15px 30px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border: 2px solid #fff;
+        transition: all 0.3s ease;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    a:hover {
+        background: #fff;
+        color: #000;
+        border: 2px solid #000;
+    }
+    /* Estilos para el formulario */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.formulario label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    background: #222;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.formulario button {
+    background: #222;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid #fff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
+}
+
+p {
+    text-align: center;
+}
+
+p2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+    </style>
